@@ -1,0 +1,25 @@
+{
+    "cluster": {
+        "license": "938987e134094a16be3c98a90157e9af",
+        "redundancy_level": 1
+    },
+    "debug": true,
+    "demo": {
+        "ec2_support": true,
+        "enable": true
+    },
+    "nodes": [
+        {
+            "hosts": "127.0.0.1",
+            "role": "master_aggregator"
+        },
+        {
+            "hosts": "ip-10-0-0-20.ec2.internal",
+            "role": "leaf"
+        }
+    ],
+    "ssh": {
+        "private_key": "/home/ubuntu/.ssh/id_rsa",
+        "user": "ubuntu"
+    }
+}

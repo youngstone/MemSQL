@@ -1,0 +1,142 @@
+2015-04-21 17:02:26,536  INFO |      setup | Starting setup process
+2015-04-21 17:02:26,536  INFO |    cluster | Loading 2 nodes in parallel
+2015-04-21 17:02:26,541  INFO |    cluster | Verifying connection to ubuntu@127.0.0.1
+2015-04-21 17:02:26,542  INFO |    cluster | Verifying connection to ubuntu@ip-10-0-0-20.ec2.internal
+2015-04-21 17:02:29,621  INFO |    cluster | Loading facts for ubuntu@ip-10-0-0-20.ec2.internal
+2015-04-21 17:02:29,653  INFO |    cluster | Loading facts for ubuntu@127.0.0.1
+2015-04-21 17:02:40,669 DEBUG |    cluster | Found 1 package files to cache
+2015-04-21 17:02:40,669 DEBUG |  127.0.0.1 | Checking if MemSQL config needs to be updated
+2015-04-21 17:02:40,805 DEBUG |  127.0.0.1 | Checking bound ports
+2015-04-21 17:02:40,805 DEBUG | ip-10-0-0-20.ec2.internal | Checking if MemSQL config needs to be updated
+2015-04-21 17:02:40,941 DEBUG | ip-10-0-0-20.ec2.internal | Checking bound ports
+2015-04-21 17:02:40,941 DEBUG |    cluster | Checking for required Ops files
+2015-04-21 17:02:41,085 DEBUG |  127.0.0.1 | Failed to parse MemSQL Ops config, will write a new one
+2015-04-21 17:02:41,953 DEBUG |    cluster | Checking for required MemSQL-Demo files
+2015-04-21 17:02:41,959 DEBUG |    cluster | Checking for required Loader files
+2015-04-21 17:02:42,134  INFO |      setup | The following actions will take place:
+|- 1. Cache required files
+|  |- Cache files: memsql-3.2.x86_64.deb
+|  |- Cache files: collectd-5.4.0-8.x86_64.deb, memsql-ops-3.1.5.x86_64.deb
+|  |- Cache files: memsql-demo-2.5.5.x86_64.deb
+|  +- Cache files: memsql-loader-1.4.12.x86_64.deb
+|- 2. Update the package system
+|  +- a. Install base dependencies
+|     |- Installing base dependencies: ubuntu@127.0.0.1
+|     +- Installing base dependencies: ubuntu@ip-10-0-0-20.ec2.internal
+|- 3. Setup the MemSQL cluster
+|  |- a. Install MemSQL
+|  |  |- Install MemSQL: ubuntu@127.0.0.1
+|  |  +- Install MemSQL: ubuntu@ip-10-0-0-20.ec2.internal
+|  |- b. Update MemSQL config: ubuntu@ip-10-0-0-20.ec2.internal
+|  |- c. Update MemSQL config: ubuntu@127.0.0.1
+|  +- d. Reconnect Cluster
+|- 4. Setup MemSQL Ops
+|  |- a. Install MemSQL Ops: ubuntu@127.0.0.1
+|  |- b. Configure MemSQL Ops: ubuntu@127.0.0.1
+|  |- c. Restart MemSQL Ops: ubuntu@127.0.0.1
+|  |- d. Install collectd
+|  |  |- Install collectd: ubuntu@127.0.0.1
+|  |  +- Install collectd: ubuntu@ip-10-0-0-20.ec2.internal
+|  +- e. Configure collectd
+|     |- Configure collectd: ubuntu@127.0.0.1
+|     +- Configure collectd: ubuntu@ip-10-0-0-20.ec2.internal
+|- 5. Setup MemSQL Loader
+|  |- a. Install MemSQL Loader: ubuntu@127.0.0.1
+|  |- b. Configure MemSQL Loader: ubuntu@127.0.0.1
+|  +- c. Restart MemSQL Loader: ubuntu@127.0.0.1
++- 6. Install MemSQL-Demo: ubuntu@127.0.0.1
+2015-04-21 17:02:42,135 DEBUG | phased_plan | Running phase `Cache required files` [4 plans]
+2015-04-21 17:02:42,284  INFO |    cluster | Cache files: memsql-3.2.x86_64.deb
+2015-04-21 17:02:42,285 DEBUG |    cluster | Downloading memsql-3.2.x86_64.deb (base: http://download.memsql.com/938987e134094a16be3c98a90157e9af)
+2015-04-21 17:02:42,285  INFO |    cluster | Cache files: memsql-demo-2.5.5.x86_64.deb
+2015-04-21 17:02:42,286 DEBUG |    cluster | Caching memsql-demo-2.5.5.x86_64.deb
+2015-04-21 17:02:42,286  INFO |    cluster | Cache files: collectd-5.4.0-8.x86_64.deb, memsql-ops-3.1.5.x86_64.deb
+2015-04-21 17:02:42,287 DEBUG |    cluster | Caching collectd-5.4.0-8.x86_64.deb
+2015-04-21 17:02:42,289  INFO |    cluster | Cache files: memsql-loader-1.4.12.x86_64.deb
+2015-04-21 17:02:42,289 DEBUG |    cluster | Caching memsql-loader-1.4.12.x86_64.deb
+2015-04-21 17:02:42,996 DEBUG |    cluster | Caching memsql-ops-3.1.5.x86_64.deb
+2015-04-21 17:02:49,737 DEBUG | phased_plan | Running phase `Update the package system`
+2015-04-21 17:02:49,737 DEBUG | phased_plan | Nothing planned for phase `Pre-configure the package system`
+2015-04-21 17:02:49,737 DEBUG | phased_plan | Running phase `Install base dependencies` [2 plans]
+2015-04-21 17:02:50,469 DEBUG |  127.0.0.1 | Installing packages: libtool
+2015-04-21 17:02:50,505 DEBUG | ip-10-0-0-20.ec2.internal | Installing packages: libtool
+2015-04-21 17:02:58,624 DEBUG | phased_plan | Running phase `Setup the MemSQL cluster`
+2015-04-21 17:02:58,624 DEBUG | phased_plan | Running phase `Install MemSQL` [2 plans]
+2015-04-21 17:02:59,026  INFO |  127.0.0.1 | Running MemSQL package install
+2015-04-21 17:02:59,028 DEBUG |  127.0.0.1 | Checking for missing dependencies
+2015-04-21 17:02:59,029 DEBUG |  127.0.0.1 | Checking to see if `g++` is installed
+2015-04-21 17:02:59,046  INFO | ip-10-0-0-20.ec2.internal | Running MemSQL package install
+2015-04-21 17:02:59,047 DEBUG | ip-10-0-0-20.ec2.internal | Checking for missing dependencies
+2015-04-21 17:02:59,049 DEBUG | ip-10-0-0-20.ec2.internal | Checking to see if `g++` is installed
+2015-04-21 17:03:00,037  INFO |  127.0.0.1 | Uploading memsql-3.2.x86_64.deb
+2015-04-21 17:03:00,118  INFO | ip-10-0-0-20.ec2.internal | Uploading memsql-3.2.x86_64.deb
+2015-04-21 17:03:03,364  INFO | ip-10-0-0-20.ec2.internal | Installing MemSQL
+2015-04-21 17:03:04,391  INFO |  127.0.0.1 | Installing MemSQL
+2015-04-21 17:03:24,819 DEBUG | phased_plan | Nothing planned for phase `Upgrade MemSQL`
+2015-04-21 17:03:24,819 DEBUG | phased_plan | Running phase `Configure MemSQL leaves`
+2015-04-21 17:03:24,820  INFO | ip-10-0-0-20.ec2.internal | Configuring MemSQL: ubuntu@ip-10-0-0-20.ec2.internal
+2015-04-21 17:03:24,820  INFO | ip-10-0-0-20.ec2.internal | Validating MemSQL config: ubuntu@ip-10-0-0-20.ec2.internal
+2015-04-21 17:03:25,918  INFO | ip-10-0-0-20.ec2.internal | Restarting MemSQL
+2015-04-21 17:03:31,511  INFO | ip-10-0-0-20.ec2.internal | Waiting up to 5 minutes for database recovery
+2015-04-21 17:03:32,128 DEBUG | phased_plan | Running phase `Configure MemSQL master aggregator`
+2015-04-21 17:03:32,129  INFO |  127.0.0.1 | Configuring MemSQL: ubuntu@127.0.0.1
+2015-04-21 17:03:32,129  INFO |  127.0.0.1 | Validating MemSQL config: ubuntu@127.0.0.1
+2015-04-21 17:03:33,125  INFO |  127.0.0.1 | Restarting MemSQL
+2015-04-21 17:03:38,624  INFO |  127.0.0.1 | Waiting up to 5 minutes for database recovery
+2015-04-21 17:03:39,227 DEBUG | phased_plan | Nothing planned for phase `Configure MemSQL child aggregators`
+2015-04-21 17:03:39,227 DEBUG | phased_plan | Nothing planned for phase `Start reconnecting the MemSQL Cluster`
+2015-04-21 17:03:39,231 DEBUG | phased_plan | Running phase `Configure the MemSQL cluster`
+2015-04-21 17:03:39,232 DEBUG |  127.0.0.1 | Reconnect Cluster
+2015-04-21 17:03:40,321 DEBUG |  127.0.0.1 | Detecting leaf node transitions
+2015-04-21 17:03:41,193 DEBUG |  127.0.0.1 | Running query against MemSQL
+SHOW LEAVES;
+2015-04-21 17:03:41,277 DEBUG |  127.0.0.1 | Planning to add leaf: ubuntu@ip-10-0-0-20.ec2.internal
+2015-04-21 17:03:41,279 DEBUG |  127.0.0.1 | Add leaf node: ubuntu@ip-10-0-0-20.ec2.internal
+2015-04-21 17:03:41,281  INFO |  127.0.0.1 | Waiting up to 5 minutes for database recovery
+2015-04-21 17:03:42,021 DEBUG |  127.0.0.1 | Running query against MemSQL
+ADD LEAF root@"ip-10-0-0-20.ec2.internal":3306;
+2015-04-21 17:03:42,158 DEBUG | phased_plan | Nothing planned for phase `Setup swap`
+2015-04-21 17:03:42,159 DEBUG | phased_plan | Nothing planned for phase `Restart dependent services`
+2015-04-21 17:03:42,159 DEBUG | phased_plan | Running phase `Setup MemSQL Ops`
+2015-04-21 17:03:42,159 DEBUG | phased_plan | Running phase `Install MemSQL Ops`
+2015-04-21 17:03:42,159  INFO |  127.0.0.1 | Install MemSQL Ops: ubuntu@127.0.0.1
+2015-04-21 17:03:42,577  INFO |  127.0.0.1 | Ops: uploading memsql-ops-3.1.5.x86_64.deb
+2015-04-21 17:03:43,271  INFO |  127.0.0.1 | Ops: installing
+2015-04-21 17:03:44,261 DEBUG | phased_plan | Running phase `Configure MemSQL Ops`
+2015-04-21 17:03:44,321  INFO |  127.0.0.1 | Ops: writing new configuration
+2015-04-21 17:03:44,413 DEBUG | phased_plan | Running phase `Restart MemSQL Ops`
+2015-04-21 17:03:44,413  INFO |  127.0.0.1 | Ops: restarting
+2015-04-21 17:03:46,441 DEBUG | phased_plan | Running phase `Install collectd` [2 plans]
+2015-04-21 17:03:46,674  INFO |  127.0.0.1 | Running collectd install
+2015-04-21 17:03:46,678  INFO | ip-10-0-0-20.ec2.internal | Running collectd install
+2015-04-21 17:03:47,070 DEBUG |  127.0.0.1 | Checking for missing dependencies
+2015-04-21 17:03:47,070 DEBUG |  127.0.0.1 | Checking to see if `libtool` is installed
+2015-04-21 17:03:47,104 DEBUG | ip-10-0-0-20.ec2.internal | Checking for missing dependencies
+2015-04-21 17:03:47,104 DEBUG | ip-10-0-0-20.ec2.internal | Checking to see if `libtool` is installed
+2015-04-21 17:03:48,033  INFO |  127.0.0.1 | Uploading collectd-5.4.0-8.x86_64.deb
+2015-04-21 17:03:48,128  INFO | ip-10-0-0-20.ec2.internal | Uploading collectd-5.4.0-8.x86_64.deb
+2015-04-21 17:03:49,340  INFO |  127.0.0.1 | Installing collectd
+2015-04-21 17:03:49,442  INFO | ip-10-0-0-20.ec2.internal | Installing collectd
+2015-04-21 17:03:53,530 DEBUG | phased_plan | Running phase `Configure collectd` [2 plans]
+2015-04-21 17:03:53,972  INFO | ip-10-0-0-20.ec2.internal | Configuring collectd
+2015-04-21 17:03:53,996  INFO |  127.0.0.1 | Configuring collectd
+2015-04-21 17:03:54,152  INFO | ip-10-0-0-20.ec2.internal | restart collectd: try 1 of 3
+2015-04-21 17:03:54,174  INFO |  127.0.0.1 | restart collectd: try 1 of 3
+2015-04-21 17:03:58,329 DEBUG | phased_plan | Running phase `Setup MemSQL Loader`
+2015-04-21 17:03:58,329 DEBUG | phased_plan | Running phase `Install MemSQL Loader`
+2015-04-21 17:03:58,329  INFO |  127.0.0.1 | Install MemSQL Loader: ubuntu@127.0.0.1
+2015-04-21 17:03:59,254  INFO |  127.0.0.1 | Loader: uploading memsql-loader-1.4.12.x86_64.deb
+2015-04-21 17:03:59,990  INFO |  127.0.0.1 | Loader: installing
+2015-04-21 17:04:01,069 DEBUG | phased_plan | Running phase `Configure MemSQL Loader`
+2015-04-21 17:04:01,122  INFO |  127.0.0.1 | Loader: writing new configuration
+2015-04-21 17:04:01,210 DEBUG | phased_plan | Running phase `Restart MemSQL Loader`
+2015-04-21 17:04:01,210  INFO |  127.0.0.1 | Loader: restarting
+2015-04-21 17:04:02,966 DEBUG | phased_plan | Running phase `Setup MemSQL-Demo`
+2015-04-21 17:04:02,966  INFO |  127.0.0.1 | Install MemSQL-Demo: ubuntu@127.0.0.1
+2015-04-21 17:04:03,614  INFO |  127.0.0.1 | MemSQL-Demo: uploading memsql-demo-2.5.5.x86_64.deb
+2015-04-21 17:04:04,540  INFO |  127.0.0.1 | MemSQL-Demo: installing
+2015-04-21 17:04:05,889  INFO |  127.0.0.1 | MemSQL-Demo: updating configuration
+2015-04-21 17:04:05,971  INFO |  127.0.0.1 | Restart MemSQL-Demo: ubuntu@127.0.0.1
+2015-04-21 17:04:06,095  INFO |  127.0.0.1 | MemSQL-Demo: restarting
+2015-04-21 17:04:07,210  INFO |  127.0.0.1 | MemSQL-Demo worker: restarting
+2015-04-21 17:04:08,353  INFO |      setup | Finished setup process with success
